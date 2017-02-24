@@ -52,7 +52,7 @@ Check it out at: https://docs.losant.com/mqtt/python/
 ****************************************************************************************'''
 
 # Construct device
-device = Device("589ae6a450530f00010319a3", "7ad296ea-ae11-47dd-9a0e-aba70e0eb7d5", "d2e3b0d5441cd22513da1ef64971c5bcc7ff262b09bbc5b876c678eab2354325")
+device = Device("YourDeviceIDHere", "Your Access Key", "Your Access Secret")
 
 def on_command(device, command):
     print("Command received.")
@@ -114,8 +114,7 @@ while True:
 Sends Data to Losant
 ****************************************************************************************'''
         
-        device.send_state({"FillLevel": FillLevel})
-        device.send_state({"LidState": LidState})
+        device.send_state({"FillLevel": FillLevel, "LidState": LidState, "location": "47.385610, 8.518149" })
 
     time.sleep(5)
     
